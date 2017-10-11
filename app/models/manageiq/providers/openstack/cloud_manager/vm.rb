@@ -4,6 +4,7 @@ class ManageIQ::Providers::Openstack::CloudManager::Vm < ManageIQ::Providers::Cl
   include_concern 'Resize'
   include_concern 'AssociateIp'
   include_concern 'ManageSecurityGroups'
+  include_concern 'OpenscapScan'
 
   supports :smartstate_analysis do
     feature_supported, reason = check_feature_support('smartstate_analysis')
